@@ -17,5 +17,7 @@ fun Intent.deepLinkRoute(): List<Any> = when (data?.host) {
 }
 
 private fun parseUniversityDeepLink(data: Uri): List<Any> {
+    val university = data.getQueryParameter("university") ?: "<empty>"
+    val major = data.getQueryParameter("major") ?: "<empty>"
     return emptyList()
 }
